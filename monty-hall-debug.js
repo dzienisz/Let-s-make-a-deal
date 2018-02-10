@@ -55,10 +55,12 @@ console.log('                     ');
 
 //losowanie
 rl.question('--> ', (answer) => {
+    console.log('jest nagroda: ' + nagroda[(answer-1)]);
     if (nagroda[(answer-1)] === true) {
         let newEmptyDoor = losuj(3);
         while (newEmptyDoor === parseInt(answer) || nagroda[newEmptyDoor-1] === true) {
             newEmptyDoor = losuj(3);
+            console.log('wylosowalem nowe drzwi' + newEmptyDoor)
         };
         console.log(colors.inverse('                           ')); 
         console.log(colors.inverse(colors.rainbow('    Zobacz                ')));
@@ -74,20 +76,31 @@ rl.question('--> ', (answer) => {
                 console.log(colors.inverse('                     ')); 
                 console.log(colors.inverse(colors.rainbow('    Wygrałeś!!!      ')));
                 console.log(colors.inverse('                     ')); 
+                console.log(nagroda);
                 rl.close();
             } else {
                 console.log("Nie wygrałeś");
+                console.log(nagroda);
                 rl.close();
             }
         });    
     } else {
         var newEmptyDoor = losuj(3);
+        console.log('nowe drzwi: ' + newEmptyDoor);
+        console.log(nagroda);
         while (newEmptyDoor === parseInt(answer) || nagroda[newEmptyDoor-1] === true) {
+            console.log('takie same, lub nagroda, losuje nowe');
             newEmptyDoor = losuj(3);
+            console.log('nowe drzwi: ' + newEmptyDoor);
             if (nagroda[(newEmptyDoor-1)] === true) {
+                console.log('nowe drzwi maja ngrode ' + newEmptyDoor);
                 newEmptyDoor = losuj(3);
+                console.log('nowe drzwi: ' + newEmptyDoor);
+            } else {
+                console.log('zwrcam nowe drzwi: ' + newEmptyDoor);
             }
         };
+        console.log('nowe puste drzwi: ' + newEmptyDoor);
         console.log(colors.inverse('                     ')); 
         console.log(colors.inverse(colors.rainbow('    Zobacz      ')));
         console.log(colors.inverse('                     ')); 
@@ -102,9 +115,11 @@ rl.question('--> ', (answer) => {
                 console.log(colors.inverse('                     ')); 
                 console.log(colors.inverse(colors.rainbow('    Wygrałeś!!!      ')));
                 console.log(colors.inverse('                     ')); 
+                console.log(nagroda);
                 rl.close();
             } else {
                 console.log("Nie wygrałeś");
+                console.log(nagroda);
                 rl.close();
             }
         });  
