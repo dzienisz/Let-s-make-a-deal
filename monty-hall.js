@@ -60,15 +60,15 @@ rl.question('--> ', (answer) => {
         while (newEmptyDoor === parseInt(answer) || nagroda[newEmptyDoor-1] === true) {
             newEmptyDoor = losuj(3);
         };
-        console.log(colors.inverse('                           ')); 
-        console.log(colors.inverse(colors.rainbow('    Zobacz                ')));
-        console.log(colors.inverse('                                ')); 
+        console.log(colors.inverse('                              ')); 
+        console.log(colors.inverse(colors.rainbow('    Zobacz                    ')));
+        console.log(colors.inverse('                              ')); 
         console.log(colors.inverse(colors.rainbow('    bramka: ' + newEmptyDoor + ' jest pusta!     ')));
-        console.log(colors.inverse('                     ')); 
-        console.log(colors.inverse(colors.rainbow('    Zmieniasz decyzjes?      ')));
-        console.log(colors.inverse('                            ')); 
-        console.log(colors.inverse(colors.rainbow('    czy zostajes?           ')));
-        console.log(colors.inverse('                            ')); 
+        console.log(colors.inverse('                              ')); 
+        console.log(colors.inverse(colors.rainbow('    Zmieniasz decyzjes?       ')));
+        console.log(colors.inverse('                              ')); 
+        console.log(colors.inverse(colors.rainbow('    czy zostajes?             ')));
+        console.log(colors.inverse('                              ')); 
         rl.question('--> ', (answer2) => {
             if (nagroda[(answer2-1)] === true) {
                 console.log(colors.inverse('                     ')); 
@@ -88,15 +88,15 @@ rl.question('--> ', (answer) => {
                 newEmptyDoor = losuj(3);
             }
         };
-        console.log(colors.inverse('                     ')); 
-        console.log(colors.inverse(colors.rainbow('    Zobacz      ')));
-        console.log(colors.inverse('                     ')); 
-        console.log(colors.inverse(colors.rainbow('    bramka: ' + newEmptyDoor + ' jest pusta     ')));
-        console.log(colors.inverse('                     ')); 
-        console.log(colors.inverse(colors.rainbow('    Zmieniasz decyzjes?      ')));
-        console.log(colors.inverse('                     ')); 
-        console.log(colors.inverse(colors.rainbow('    czy zostajes?      ')));
-        console.log(colors.inverse('                     ')); 
+        console.log(colors.inverse('                              ')); 
+        console.log(colors.inverse(colors.rainbow('    Zobacz                    ')));
+        console.log(colors.inverse('                              ')); 
+        console.log(colors.inverse(colors.rainbow('    bramka: ' + newEmptyDoor + ' jest pusta!     ')));
+        console.log(colors.inverse('                              ')); 
+        console.log(colors.inverse(colors.rainbow('    Zmieniasz decyzjes?       ')));
+        console.log(colors.inverse('                              ')); 
+        console.log(colors.inverse(colors.rainbow('    czy zostajes?             ')));
+        console.log(colors.inverse('                              ')); 
         rl.question('--> ', (answer2) => {
             if (nagroda[(answer2-1)] === true) {
                 console.log(colors.inverse('                     ')); 
